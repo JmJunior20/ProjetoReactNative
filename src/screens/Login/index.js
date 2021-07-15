@@ -50,7 +50,7 @@ function login(nome, senha, {navigation}) {
     if (nome != User || senha != Pass) {
         alert('Usuário ínvalido ou senha inválido!')
     } else {
-        navigation.jumpTo('Perfil');
+        navigation.jumpTo('Home');
     }
 };
 
