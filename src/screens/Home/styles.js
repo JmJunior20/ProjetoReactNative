@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
         elevation: 5,
         width: '98%',
-        minHeight: 200
+        minHeight: 180
       },
       promotionImage: {
         width: '40%'

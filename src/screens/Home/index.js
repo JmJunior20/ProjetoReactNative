@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, Image, TouchableHighlight } from 'react-native'
+import { View, Text, FlatList, Image, TouchableHighlight, ActivityIndicator } from 'react-native'
 
 import Styles from './styles';
 
@@ -10,14 +10,20 @@ const Home = ({ navigation }) => {
     const [loading, setLoading] = useState(false)
 
     const carregaPosts = async () => {
-      if(loading) return
+      if(loading) return      
       setLoading(true)
       const posts = await getPosts()
       setPostList(posts)
       setLoading(false)
     }
 
+    const renderFooter = () => {
+      if(!loading) return null
+      return <ActivityIndicator size="large" color="#111" />
+    }
+
     useEffect(() => {
+      // if(loading) return
       carregaPosts()
     }, [])
 
@@ -25,6 +31,8 @@ const Home = ({ navigation }) => {
       <FlatList
         style={Styles.container}         
         data={postList}
+        keyExtractor={item => item.id}
+        ListFooterComponent={renderFooter}
         renderItem={({item}) => (
           <View style={ Styles.cardView }>
             <Image style={ Styles.promotionImage } source={ {uri:item.url }}  />
