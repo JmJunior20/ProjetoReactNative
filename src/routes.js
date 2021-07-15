@@ -65,7 +65,7 @@ const Stack = createStackNavigator();
 export default function Routes () {
   return (
     <NavigationContainer>             
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Home">  
           <Stack.Screen name="Home" component={MyTabs} options={{ headerShown: false}}/>
           <Stack.Screen name="Detalhes" component={Product}/>
           <Stack.Screen name="Contador" component={Bag}/>
