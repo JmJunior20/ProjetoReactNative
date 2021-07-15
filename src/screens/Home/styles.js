@@ -1,6 +1,10 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      marginTop: 30
+    },
     centeredView: {
         flex: 1,
         alignItems: "center",
@@ -21,24 +25,27 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         elevation: 5,
-        width: '94%',
+        width: '98%',
         minHeight: 200
       },
       promotionImage: {
-        width: '50%'
+        width: '40%'
       },
       descriptionText: {
-        flex: 1
+        flex: 1,
+        justifyContent: "center",
       },
       titleText: {
         color: "black",
         fontWeight: "bold",
+        textAlign: "center",
         fontSize: 16,
         margin: 5
       },
       priceText: {
         color: "#111",
         fontWeight: "bold",
+        textAlign: "center",
         fontSize: 16,
         margin: 5
       },
@@ -47,7 +54,7 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         padding: 10,
         elevation: 2,
-        margin: 5
+        margin: 5        
       },
       textLinkButton: {
         color: "#FFFFFF",
