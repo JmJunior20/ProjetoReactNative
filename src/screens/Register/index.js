@@ -20,7 +20,8 @@ const Register = ({ navigation }) => {
                 style={styles.input}
                 value={cpf}
                 onChangeText={setCpf} 
-                placeholder='Digite seu CPF' 
+                placeholder='Digite seu CPF'
+                keyboardType={'numeric'} 
             />
             <TextInput 
                 style={styles.input} 

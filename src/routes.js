@@ -13,6 +13,7 @@ import Login from "./screens/Login";
 import Register from "./screens/Register";
 import Product from './screens/Product';
 import End from './screens/End';
+import Perfil from './screens/Perfil';
 
 
 
@@ -27,7 +28,7 @@ function MyTabs () {
     }}>          
       <Tab.Screen 
         name="Home" 
-        component={Home} 
+        component={HomeStack} 
         options={{
           tabBarLabel: 'HOME',
           tabBarIcon: ({color}) => ( 
@@ -37,7 +38,7 @@ function MyTabs () {
       />        
       <Tab.Screen 
         name="Sacola" 
-        component={Bag} 
+        component={BagStack} 
         options={{
             tabBarLabel: 'SACOLA',
           tabBarIcon: ({color}) => (
@@ -46,8 +47,8 @@ function MyTabs () {
         }}
       />
       <Tab.Screen 
-        name="Login" 
-        component={Login} 
+        name="Perfil" 
+        component={PerfilStack} 
         options={{
             tabBarLabel: 'SUA CONTA',
           tabBarIcon: ({color}) => (
@@ -65,14 +66,38 @@ const Stack = createStackNavigator();
 export default function Routes () {
   return (
     <NavigationContainer>             
-      <Stack.Navigator initialRouteName="Home">  
-          <Stack.Screen name="Home" component={MyTabs} options={{ headerShown: false}}/>
-          <Stack.Screen name="Detalhes" component={Product}/>
-          <Stack.Screen name="Contador" component={Bag}/>
-          <Stack.Screen name="Login" component={Login} options={{ headerShown: false}}/>
-          <Stack.Screen name="Cadastro" component={Register}/>
-          <Stack.Screen name="End" component={End}/>
+      <Stack.Navigator initialRouteName="Login"> 
+          <Stack.Screen name="Login" component={Login} options={{ headerShown: false}}/> 
+          <Stack.Screen name="Teste" component={MyTabs} options={{ headerShown: false}}/>
+          <Stack.Screen name="Register" component={Register} />
       </Stack.Navigator>         
     </NavigationContainer>
+  );
+};
+
+function HomeStack () {
+  return (           
+      <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={Home} options={{ headerShown: false}}/>
+          <Stack.Screen name="Detalhes" component={Product} />
+      </Stack.Navigator>
+  );
+};
+
+function BagStack () {
+  return (           
+      <Stack.Navigator initialRouteName="Bag">
+          <Stack.Screen name="Bag" component={Bag} options={{ headerShown: false}}/>
+          <Stack.Screen name="End" component={End} options={{ headerShown: false}}/>
+      </Stack.Navigator>
+  );
+};
+
+function PerfilStack () {
+  return (           
+      <Stack.Navigator initialRouteName="Perfil">
+          <Stack.Screen name="Perfil" component={Perfil} options={{ headerShown: false}}/>
+          <Stack.Screen name="Login" component={Login} options={{ headerShown: false}}/>
+      </Stack.Navigator>
   );
 };

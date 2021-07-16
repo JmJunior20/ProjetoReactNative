@@ -32,13 +32,8 @@ const Login = ({ navigation }) => {
             </TouchableOpacity>
             <TouchableOpacity 
             style={styles.cadastro__button} 
-            onPress={() => navigation.navigate('Cadastro')}>
+            onPress={() => navigation.navigate('Register')}>
                     <Text style={styles.cadastro__buttonText}>Cadastrar</Text>
-            </TouchableOpacity>
-            <TouchableOpacity 
-            style={styles.sair__button} 
-            onPress={() => navigation.navigate('Home')}>
-                    <Text style={styles.sair__buttonText}>Sair</Text>
             </TouchableOpacity>
         </View>
     );    
@@ -50,7 +45,7 @@ function login(nome, senha, {navigation}) {
     if (nome != User || senha != Pass) {
         alert('Usuário ínvalido ou senha inválido!')
     } else {
-        navigation.jumpTo('Home');
+        navigation.navigate('Teste');
     }
 };
 
