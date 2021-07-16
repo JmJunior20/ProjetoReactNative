@@ -55,7 +55,14 @@ const styles = StyleSheet.create({
       textLinkButton: {
         color: "#FFFFFF",
         textAlign: 'center'
-      }
+      },
+      homeButton: {
+        backgroundColor: "gray",
+        borderRadius: 15,
+        padding: 10,
+        elevation: 2,
+        margin: 5
+      },
     
 });
 

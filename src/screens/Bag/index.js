@@ -38,6 +38,12 @@ const Bag = ({ navigation }) => {
             >
             <Text style={ Styles.textLinkButton }>COMPRAR</Text>
         </TouchableHighlight>
+        <TouchableHighlight
+            style={ Styles.homeButton }
+            onPress={() => navigation.navigate('Home')}
+            >
+            <Text style={ Styles.textLinkButton }>CONTINUAR COMPRANDO</Text>
+        </TouchableHighlight>
       </View>
       </>
     );    

@@ -89,6 +89,7 @@ function BagStack () {
       <Stack.Navigator initialRouteName="Bag">
           <Stack.Screen name="Bag" component={Bag} options={{ headerShown: false}}/>
           <Stack.Screen name="End" component={End} options={{ headerShown: false}}/>
+          <Stack.Screen name="Home" component={Home} options={{ headerShown: false}}/>
       </Stack.Navigator>
   );
 };

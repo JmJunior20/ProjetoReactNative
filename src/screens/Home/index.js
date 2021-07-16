@@ -40,14 +40,14 @@ const Home = ({ navigation }) => {
         renderItem={({item}) => (
                   
           <View style={ Styles.cardView }>
-            <Image style={ Styles.promotionImage } source={ {uri:item.url }}  />
+            <Image style={ Styles.promotionImage } source={ {uri:item.url} } />
             <View style={ Styles.descriptionText }>
               <Text style={ Styles.titleText }>{item.nome}</Text>
-              <Text style={ Styles.priceText }>R${item.preco}</Text>
+              <Text style={ Styles.priceText }>R${item.preco},00</Text>
               <TouchableHighlight
                   style={ Styles.linkButton }
                   title="Product"
-                  onPress={() => navigation.navigate('Detalhes')}
+                  onPress={() => navigation.navigate('Detalhes', {produto: item})}
                 >
                 <Text style={ Styles.textLinkButton }>SAIBA MAIS</Text>
               </TouchableHighlight>
