@@ -79,7 +79,7 @@ function HomeStack () {
   return (           
       <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={Home} options={{ headerShown: false}}/>
-          <Stack.Screen name="Detalhes" component={Product} />
+          <Stack.Screen name="Detalhes" component={Product}/>
       </Stack.Navigator>
   );
 };

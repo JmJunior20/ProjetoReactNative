@@ -3,9 +3,13 @@ import { View, Text, TouchableHighlight, Image } from 'react-native'
 
 import Styles from './styles';
 
+import Header from '../../components/Header';
+
 const Bag = ({ navigation }) => {
 
     return (
+        <>
+        <Header />
         <View style={ Styles.centeredView }>
         <View style={ Styles.cardView }>
           <Image style={ Styles.promotionImage } source={ {uri:"https://i.pinimg.com/236x/d5/b3/a2/d5b3a28ec99cfe5b3b20226430764512.jpg" }}  />
@@ -35,6 +39,7 @@ const Bag = ({ navigation }) => {
             <Text style={ Styles.textLinkButton }>COMPRAR</Text>
         </TouchableHighlight>
       </View>
+      </>
     );    
 };
 

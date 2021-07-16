@@ -3,6 +3,7 @@ import { View, Text, TouchableHighlight, Image, Linking } from 'react-native'
 
 import Styles from './styles';
 
+
 const Product = ({ navigation }) => {
 
     return (

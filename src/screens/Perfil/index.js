@@ -3,9 +3,13 @@ import { View, Text, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 
+import Header from '../../components/Header';
+
 const Perfil = ({ navigation }) => {
 
     return (
+        <>
+        <Header />
         <View style={styles.container}>
             <Text style={styles.texto}>Olá, José</Text>           
             <TouchableOpacity 
@@ -14,6 +18,7 @@ const Perfil = ({ navigation }) => {
                     <Text style={styles.login__buttonText}>Sair</Text>
             </TouchableOpacity>
         </View>
+        </>
     );    
 };
 

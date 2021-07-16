@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     centeredView: {
         flex: 1,
         alignItems: "center",
-        marginTop: 30
+        marginTop: 10
       },
       cardView: {
         flexDirection: 'column',
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
         elevation: 5,
         width: '94%',
-        minHeight: 700
+        minHeight: 650
       },
       promotionImage: {
         flex: 2,

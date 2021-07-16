@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
     },
 
     texto: {
-        fontSize: 30,
-        marginBottom: 20,
+        fontSize: 35,
+        marginBottom: 25,
         color: "#111",
         fontWeight:"bold",
     },

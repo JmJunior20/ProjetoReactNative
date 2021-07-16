@@ -5,6 +5,8 @@ import Styles from './styles';
 
 import getPosts from '../../repository/postsRepository';
 
+import Header from '../../components/Header';
+
 const Home = ({ navigation }) => {
     const [postList, setPostList] = useState([]);
     const [loading, setLoading] = useState(false)
@@ -28,12 +30,15 @@ const Home = ({ navigation }) => {
     }, [])
 
     return ( 
+      <>
+      <Header /> 
       <FlatList
         style={Styles.container}         
         data={postList}
         keyExtractor={item => item.id}
         ListFooterComponent={renderFooter}
         renderItem={({item}) => (
+                  
           <View style={ Styles.cardView }>
             <Image style={ Styles.promotionImage } source={ {uri:item.url }}  />
             <View style={ Styles.descriptionText }>
@@ -47,10 +52,11 @@ const Home = ({ navigation }) => {
                 <Text style={ Styles.textLinkButton }>SAIBA MAIS</Text>
               </TouchableHighlight>
             </View>
-          </View>
+          </View>         
           
         )}
       />
+      </> 
     );    
 };
 
