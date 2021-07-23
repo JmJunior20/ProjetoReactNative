@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
       cardView: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        alignItems: "center",
         margin: 5,
         backgroundColor: "white",
         borderRadius: 15,
@@ -29,7 +30,8 @@ const styles = StyleSheet.create({
         height: 100,
       },
       descriptionText: {
-        flex: 1
+        flex: 1,
+        alignItems: "center",
       },
       titleText: {
         textAlign: "center",
@@ -62,6 +64,18 @@ const styles = StyleSheet.create({
         padding: 10,
         elevation: 2,
         margin: 5
+      },
+      qnt: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center"
+      },
+      qntButton: {
+        backgroundColor: "#111",
+        borderRadius: 15,
+        padding: 10,
+        elevation: 2,
+        margin: 5,
       },
     
 });

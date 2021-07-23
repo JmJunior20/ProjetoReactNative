@@ -1,11 +1,13 @@
-import React from 'react';
-import { View, Text, TouchableHighlight, Image } from 'react-native'
+import React, { useState } from 'react';
+import { View, Text, TouchableHighlight, Image, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 import Styles from './styles';
 
 import Header from '../../components/Header';
 
 const Bag = ({ navigation }) => {
+  const [numero, setNumero] = useState(1);
 
     return (
         <>
@@ -18,7 +20,17 @@ const Bag = ({ navigation }) => {
           </View>
           <View style={ Styles.descriptionText }>  
             <Text style={ Styles.priceText }>R$32,90</Text>          
-            <Text style={ Styles.priceText }>QNT: 1</Text>
+            <View style={ Styles.qnt }>
+                <TouchableOpacity
+                    onPress={() => setNumero(numero - 1)}>
+                        <Icon name="minuscircleo" size={25} />
+                </TouchableOpacity>  
+              <Text style={ Styles.priceText }>{numero}</Text>
+                <TouchableOpacity
+                    onPress={() => setNumero(numero + 1)}>
+                        <Icon name="pluscircleo" size={25} />
+                </TouchableOpacity>          
+            </View>
           </View>          
         </View>
         <View style={ Styles.cardView }>
@@ -27,9 +39,21 @@ const Bag = ({ navigation }) => {
             <Text style={ Styles.titleText }>Uma Lista (quase) Definitiva De Piores Medos</Text>            
           </View>
           <View style={ Styles.descriptionText }>  
-            <Text style={ Styles.priceText }>R$32,90</Text>          
-            <Text style={ Styles.priceText }>QNT: 1</Text>
-          </View>          
+            <Text style={ Styles.priceText }>R$32,90</Text>         
+            
+            <View style={ Styles.qnt }>
+                <TouchableOpacity
+                    onPress={() => setNumero(numero - 1)}>
+                        <Icon name="minuscircleo" size={25} />
+                </TouchableOpacity>  
+              <Text style={ Styles.priceText }>{numero}</Text>
+                <TouchableOpacity
+                    onPress={() => setNumero(numero + 1)}>
+                        <Icon name="pluscircleo" size={25} />
+                </TouchableOpacity>          
+            </View>  
+          </View>        
+                   
         </View>
         <Text style={ Styles.priceText }>Total: R$65,80</Text>        
         <TouchableHighlight
